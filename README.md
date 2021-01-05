@@ -22,8 +22,9 @@ https://workouttrackerdz.herokuapp.com/
 
 ## Screenshots
 
-
+![Front Page](./screenshots/fitnesstracker.png "frontpage")
 
 ## Contact
 
 email: danielshiaolin@gmail.com
+personal portfolio: https://github.com/deezyxp
