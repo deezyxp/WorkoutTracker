@@ -2,7 +2,6 @@ const Workout = require("../models/exercise.js");
 
 module.exports = function (app) {
 
-    // add find app.post
     app.get("/api/workouts", (req, res) => {
         Workout.find()
         .then(dbWorkout => {
@@ -25,7 +24,6 @@ module.exports = function (app) {
             });
     });
 
-    //update to find by ID here
     app.put("/api/workouts/:id", (req, res) => {
         Workout.findByIdAndUpdate(req.params.id, 
             {$push: { exercises: req.body} })
