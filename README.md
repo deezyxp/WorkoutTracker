@@ -22,7 +22,7 @@ https://workouttrackerdz.herokuapp.com/
 
 ## Screenshots
 
-![Front Page](./screenshots/fitnesstracker.png "frontpage")
+![Front Page](screenshots/fitnesstracker.PNG "frontpage")
 
 ## Contact
 
