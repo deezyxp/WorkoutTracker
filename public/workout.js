@@ -8,7 +8,7 @@ async function initWorkout() {
 
     const workoutSummary = {
       date: formatDate(lastWorkout.day),
-      totalDuration: lastWorkout.totalDuration,
+      totalDuration: calculateExercisesTotalDuration(lastWorkout.exercises),
       numExercises: lastWorkout.exercises.length,
       ...tallyExercises(lastWorkout.exercises)
     };
@@ -17,6 +17,20 @@ async function initWorkout() {
   } else {
     renderNoWorkoutText()
   }
+}
+
+function calculateExercisesTotalDuration(exercises){
+  let duration = 0;
+  for (let index = 0; index < exercises.length; index++) {
+    const exercise = exercises[index];
+    
+    if(exercise.duration) {
+      duration += exercise.duration;
+    }
+
+  }
+
+  return duration;
 }
 
 function tallyExercises(exercises) {
